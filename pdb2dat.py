@@ -7,10 +7,6 @@ from pysimm_system import PysimmSystem
 if __name__ == "__main__":
     log_message_to_file(message=f"Program initialized.")
     output_dir = os.path.join(settings.output_dir, "")
-    try:
-        shutil.rmtree(output_dir)
-    except:
-        pass
     os.makedirs(output_dir)
     pdb_file_path = settings.pdb_file_path
     pdb_file_lines = read_pdb_file(pdb_file_path)
